@@ -27,7 +27,9 @@ public class AccountsService {
   public Account getAccount(String accountId) {
     return this.accountsRepository.getAccount(accountId);
   }
-  
+  public AccountsRepository getAccountsRepository() {
+		return accountsRepository;
+	}
   public void transferAmount(String accountFrom, String accountTo, BigDecimal amount) {
 		this.accountsRepository.transferAmount(accountFrom, accountTo, amount);
 	}
